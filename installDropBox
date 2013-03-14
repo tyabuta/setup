@@ -2,16 +2,22 @@
 
 wget -O dropbox.py https://www.dropbox.com/download?dl=packages/dropbox.py
 chmod 500 dropbox.py 
+
 ./dropbox.py start --install
+wait 3s
+
 ./dropbox.py start
+wait 3s
 
 echo "access URL and input password on web browser."
-echo "if you accepted DropBox, press any key."
-read
+echo "if you accepted DropBox,"
+read -p "press any key to continue..." -n1 -s
 
 echo "install start"
 ./dropbox.py stop
 ./dropbox.py start
+wait 3s
+
 ./dropbox.py lansync n
 ./dropbox.py running
 
