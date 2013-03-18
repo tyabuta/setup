@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+
+
+./dropbox.py stop
+sleep 3s
+
+yes | rm dropbox.py
+rm -R .dropbox .dropbox-dist
+
+echo "done!"
+
